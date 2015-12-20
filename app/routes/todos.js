@@ -14,6 +14,11 @@ export default Ember.Route.extend({
             });
             // Save the new model
             todo.save();
+        },
+
+        toggleTodo: function(todo, value) {
+            todo.set('isCompleted', value);
+            todo.save();
         }
     }
 });
