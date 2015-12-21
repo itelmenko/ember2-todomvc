@@ -1,0 +1,5 @@
+<ul id="todo-list">
+    {{#each model as |todo|}}
+        {{todo-item item=todo toggleTodoItemAction="toggleTodo"}}
+    {{/each}}
+</ul>

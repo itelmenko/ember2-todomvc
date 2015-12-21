@@ -4,14 +4,9 @@
        {{new-todo-input createTodoAction="createTodo"}}
     </header>
     <section id="main">
-        <ul id="todo-list">
-          {{#each model as |todo|}}
-              {{todo-item item=todo toggleTodoItemAction="toggleTodo"}}
-          {{/each}}
-        </ul>
-
+        {{outlet}}
         <input type="checkbox" id="toggle-all">
     </section>
 
-    {{todo-list-footer todos=model model=model}}
+    {{todo-list-footer todos=model}}
 </section>
