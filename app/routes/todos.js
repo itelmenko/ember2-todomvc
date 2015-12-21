@@ -19,6 +19,19 @@ export default Ember.Route.extend({
         toggleTodo: function(todo, value) {
             todo.set('isCompleted', value);
             todo.save();
+        },
+
+        updateTodo: function(todo, title) {
+            if (Ember.isEmpty(title)) {
+                this.send('deleteTodo', todo);
+            } else {
+                todo.save();
+            }
+        },
+
+        deleteTodo: function(todo) {
+            todo.deleteRecord();
+            todo.save();
         }
     }
 });

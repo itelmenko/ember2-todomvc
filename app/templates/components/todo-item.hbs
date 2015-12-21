@@ -1,4 +1,8 @@
-<li class="{{if isCompleted 'completed'}}">
-    {{input type="checkbox" checked=isCompleted class="toggle"}}
-    <label>{{item.title}}</label><button class="destroy"></button>
+<li class="{{if isCompleted 'completed'}} {{if isEditing 'editing'}}">
+    {{#if isEditing}}
+        {{input-focused class="edit" value=item.title focus-out="acceptChanges" insert-newline="acceptChanges"}}
+    {{else}}
+      {{input type="checkbox" checked=isCompleted class="toggle"}}
+      <label {{action "editTodo" on="doubleClick"}}>{{item.title}}</label><button {{action "removeTodo"}} class="destroy"></button>
+    {{/if}}
 </li>
