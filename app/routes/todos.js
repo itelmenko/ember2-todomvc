@@ -32,6 +32,11 @@ export default Ember.Route.extend({
         deleteTodo: function(todo) {
             todo.deleteRecord();
             todo.save();
+        },
+
+        clearCompletedTodos: function(completed) {
+            completed.invoke('deleteRecord');
+            completed.invoke('save');
         }
     }
 });
