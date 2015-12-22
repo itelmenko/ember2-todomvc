@@ -1,7 +1,9 @@
 # Ember2-todomvc
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is [todomvc](http://todomvc.com/) project for EmberJs v2. On [http://todomvc.com/](http://todomvc.com/)
+we can see just application for very old version 1.10.0-beta.3. It does not work for EmberJs v2.
+But application Ember2-todomvc supports last release of EmberJs framework.
+Please, send any comments about my implementation.
 
 ## Prerequisites
 
