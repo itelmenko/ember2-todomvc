@@ -1,1 +1,5 @@
-export { default } from 'ember-data-fixture-adapter';
+import DS from 'ember-data';
+
+export default DS.LSAdapter.extend({
+    namespace: 'ember2-todomvc'
+});
